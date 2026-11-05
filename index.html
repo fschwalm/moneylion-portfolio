@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected MoneyLion frontend work by Fagner Schwalm. Branded offer applications and embedded partner experiences.">
+  <title>Fagner Schwalm — Frontend Portfolio</title>
+  <style>
+    :root{--bg:#f6f5f1;--ink:#19312d;--muted:#61716a;--line:#dce2da;--accent:#176c58;--white:#fff;--radius:18px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit}
+    .notice{padding:13px 24px;background:#e7eee4;text-align:center;font-size:13px;line-height:1.5;color:#304a37}.notice strong{font-weight:650}.notice span{margin-left:7px}
+    main,footer{max-width:1180px;margin:auto;padding-left:36px;padding-right:36px}nav{display:flex;align-items:center;justify-content:space-between;padding:29px 0;border-bottom:1px solid var(--line)}.name{text-decoration:none;font-size:15px;font-weight:650;letter-spacing:-.3px}svg{width:17px;height:17px;flex:none}
+    .intro{padding:58px 0 45px;display:grid;grid-template-columns:1.2fr 1fr;align-items:end;gap:60px}.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;color:var(--accent);margin:0 0 17px}h1{font-size:clamp(38px,5.3vw,64px);line-height:1.03;letter-spacing:-3px;font-weight:550;margin:0}h1 span{color:#7b8e80}.summary{font-size:15px;line-height:1.75;color:var(--muted);margin:0 0 2px;max-width:410px}.summary strong{color:var(--ink);font-weight:550}.stack{display:flex;gap:8px;margin:21px 0 0;flex-wrap:wrap}.stack span{font-size:11px;border:1px solid #cfd8cf;padding:7px 11px;border-radius:100px}
+    .section-heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 17px;gap:20px}.section-heading h2{font-weight:550;font-size:18px;letter-spacing:-.4px;margin:0}.section-heading p{font-size:12px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--white)}.capture{display:block;width:100%;border:0;background:#fff;padding:23px 19px 0;cursor:zoom-in;text-align:left;position:relative}.capture img{display:block;width:100%;height:auto}.capture:after{content:'↗';position:absolute;right:13px;top:12px;width:26px;height:26px;display:grid;place-items:center;background:#f0f4ef;border-radius:50%;font-size:15px;opacity:0;transition:opacity .18s}.capture:hover:after,.capture:focus-visible:after{opacity:1}.card-info{padding:21px 24px;display:flex;align-items:center;justify-content:space-between;gap:15px}.card h3{margin:0 0 6px;font-size:16px;font-weight:600;letter-spacing:-.3px}.card p{font-size:12px;color:var(--muted);margin:0}.live{display:flex;gap:7px;align-items:center;text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:9px 12px;font-size:11px;white-space:nowrap}.live:hover{background:#eff5ee;border-color:#93b2a0}.live svg{width:13px;height:13px}.partners{margin-top:44px}.partners .capture{padding:0;overflow:hidden;height:300px;background:#fdfdfc}.partners .capture img{height:100%;object-fit:contain;object-position:center}.partners .card-info{padding-top:18px;padding-bottom:18px}.context{font-size:13px;color:var(--muted);line-height:1.65;margin:23px 0 0;max-width:810px}.context strong{color:var(--ink);font-weight:550}footer{margin-top:48px;padding-top:22px;padding-bottom:28px;display:flex;justify-content:space-between;gap:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--line)}
+    dialog{border:0;border-radius:16px;padding:0;width:min(1200px,94vw);max-height:92vh;background:white;box-shadow:0 30px 120px #0006}dialog::backdrop{background:#10221cbd;backdrop-filter:blur(5px)}.dialog-head{padding:15px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);gap:20px}.dialog-head h2{font-size:15px;margin:0}.close{width:34px;height:34px;border:1px solid var(--line);background:white;border-radius:50%;cursor:pointer;font-size:23px;line-height:1}.dialog-image{display:block;width:100%;height:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}:focus-visible{outline:3px solid #279874;outline-offset:4px}
+    @media(max-width:700px){main,footer{padding-left:20px;padding-right:20px}.notice{padding:11px 15px;font-size:11px}.notice span{display:block;margin:2px 0 0}nav{padding:23px 0}.intro{grid-template-columns:1fr;gap:24px;padding:38px 0 34px}h1{letter-spacing:-2px;font-size:49px}.summary{font-size:14px;max-width:100%}.stack{margin-top:16px}.grid{grid-template-columns:1fr;gap:18px}.section-heading{align-items:start}.section-heading p{max-width:120px;text-align:right;line-height:1.5}.capture{padding:17px 12px 0}.card-info{padding:18px}.partners{margin-top:33px}.partners .capture{height:260px}footer{margin-top:32px;font-size:10px;line-height:1.6}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+    @media print{.notice{background:white}.capture:after,.live,dialog{display:none}.intro{padding:25px 0}.partners .capture{height:230px}.card{break-inside:avoid}.partners{break-before:page}footer{margin-top:20px}}
+  </style>
+</head>
+<body>
+  <div class="notice"><strong>US location required to view the live examples.</strong><span>This portfolio is accessible from anywhere.</span></div>
+  <main>
+    <nav aria-label="Portfolio"><a class="name" href="#">Fagner Schwalm</a></nav>
+    <header class="intro">
+      <div><p class="eyebrow">Senior Frontend Engineer · Selected work</p><h1>One platform.<br><span>Many experiences.</span></h1></div>
+      <div><p class="summary">I contributed to <strong>MoneyLion’s frontend architecture and reusable offer experiences</strong>, bringing financial products into different partner brands.</p><div class="stack" aria-label="Technologies"><span>React</span><span>Next.js</span><span>TypeScript</span></div></div>
+    </header>
+    <section aria-labelledby="applications-title">
+      <div class="section-heading"><h2 id="applications-title">Branded offer applications</h2><p>Two partners. A shared foundation.</p></div>
+      <div class="grid">
+        <article class="card"><button class="capture" data-image="assets/business-insider-app.webp" data-title="Business Insider offer application" aria-label="Enlarge Business Insider application screenshot"><img src="assets/business-insider-app.webp" alt="Business Insider branded comparison of cash advance offers with blue buttons" width="2230" height="1010"></button><div class="card-info"><div><h3>Business Insider</h3><p>Hosted offer experience</p></div><a class="live" href="https://www.moneylion.com/network/business-insider/cash-advance-embed/explore" target="_blank" rel="noopener noreferrer">Live example <span aria-hidden="true">↗</span></a></div></article>
+        <article class="card"><button class="capture" data-image="assets/ecoatm-app.webp" data-title="ecoATM offer application" aria-label="Enlarge ecoATM application screenshot"><img src="assets/ecoatm-app.webp" alt="ecoATM branded comparison of cash advance offers with turquoise buttons" width="2230" height="1010"></button><div class="card-info"><div><h3>ecoATM</h3><p>Hosted offer experience</p></div><a class="live" href="https://www.moneylion.com/network/ecoatm/cash-advance-embed/explore" target="_blank" rel="noopener noreferrer">Live example <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+    </section>
+    <section class="partners" aria-labelledby="partners-title">
+      <div class="section-heading"><h2 id="partners-title">Inside partner websites</h2><p>The experience in context.</p></div>
+      <div class="grid">
+        <article class="card"><button class="capture" data-image="assets/business-insider-partner.webp" data-title="Business Insider embedded integration" aria-label="Enlarge Business Insider partner integration screenshot"><img src="assets/business-insider-partner.webp" alt="MoneyLion offers embedded within a Business Insider personal finance article" width="2520" height="1678" loading="lazy"></button><div class="card-info"><div><h3>Business Insider</h3><p>Embedded in editorial content</p></div><a class="live" href="https://www.businessinsider.com/personal-finance/personal-loans/cash-advance-vs-payday-loan" target="_blank" rel="noopener noreferrer">Partner page <span aria-hidden="true">↗</span></a></div></article>
+        <article class="card"><button class="capture" data-image="assets/ecoatm-partner.webp" data-title="ecoATM embedded integration" aria-label="Enlarge ecoATM partner integration screenshot"><img src="assets/ecoatm-partner.webp" alt="MoneyLion offers embedded within the ecoATM device-selling website" width="3510" height="1758" loading="lazy"></button><div class="card-info"><div><h3>ecoATM</h3><p>Embedded in the customer journey</p></div><a class="live" href="https://www.ecoatm.com/pages/sell?brand=apple&amp;series=iphone-17-pro-max&amp;storage=512gb&amp;carrier=unlocked" target="_blank" rel="noopener noreferrer">Partner page <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+      <p class="context">These are two examples from a platform serving <strong>additional partners and financial product types</strong>. My work focused on the MoneyLion application and shared frontend; partner websites are shown as integration context.</p>
+    </section>
+  </main>
+  <footer><span>Fagner Schwalm · Frontend Portfolio</span><span>Public examples captured November 5, 2026.</span></footer>
+  <dialog aria-labelledby="image-title"><div class="dialog-head"><h2 id="image-title"></h2><button class="close" aria-label="Close image">×</button></div><img class="dialog-image" alt=""></dialog>
+  <script>
+    const dialog = document.querySelector('dialog');
+    const expanded = dialog.querySelector('img');
+    document.querySelectorAll('[data-image]').forEach(button => {
+      button.addEventListener('click', () => {
+        expanded.src = button.dataset.image;
+        expanded.alt = button.querySelector('img').alt;
+        document.getElementById('image-title').textContent = button.dataset.title;
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); }});
+  </script>
+</body>
+</html>
